@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --color-1: #2f3144; 
+    --color-2: white; 
+    --color-3: rgb(221, 191, 221);
+    --color-4: rgb(64, 8, 64);
+    --color-5: #e7e8ec; 
+}
+
+html{
+    font-family: outfit;
+    font-size: 10px;
+}
+
+ section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .container {
+    padding: 100px 30px;
+    width: 100%;
+    max-width: 1200px;
+ }
+
+ .container .title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--color-1);
+    margin-bottom: 50px;
+    max-width: 700px;
+ }
+
+ .container .main{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .left .card {
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-in-out background-color;
+ }
+
+ .left .card ion-icon {
+    padding: 15px;
+    background-color: var(--color-3);
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+ }
+
+ .left .card h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--color-1);
+    margin: 10px 0;
+ }
+
+ .left .card p {
+    font-size: 16px;
+ }
+
+ .left .card:hover {
+     background-color: var(--color-3);
+ }
+
+ .left .card:hover ion-icon {
+    background-color: var(--color-2);
+    color: #2f3144;
+ }
+
+ .right {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+ }
+ .right h1{
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 30px;
+ }
+
+ .right .blog-item{
+    padding: 10px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+ }
+
+ .blog-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+ }
+
+ .blog-item p {
+    font-size: 16px;
+    color: purple;
+    font-weight: 400;
+
+ }
+
+ .blog-item:hover {
+    background-color: var(--color-5);
+ }
+
+ @media only screen and (min-width:700px) {
+    .container .main {
+         flex-direction: row;
+        
+    }
+    .container .left {
+        flex: .7;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-gap: 20px;  
+
+    }
+
+    .container .card {
+        margin: 0;
+    }
+
+    .container .right {
+        flex: .3;
+        margin: 30px;
+    }
+
+    .container .title .h1 {
+        font-size: 34px;
+        font-weight: 900;
+    }
+ }
